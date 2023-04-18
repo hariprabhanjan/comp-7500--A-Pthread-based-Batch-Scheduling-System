@@ -1,0 +1,95 @@
+Script started on Sun Mar 19 02:24:54 2023
+[?1034hsh-4.2# ./aubatch
+
+ Welcome to HariPrabhanjan's (hzl0151) batch job scheduler version 1.0
+ Type 'help' to find more about AUbatch commands.
+>help
+run <job> <time> <priority>: submit a job named <job>,  	
+			     execution time is <time>,  	
+			     priority is <priority>.		
+list: display the job status.					
+fcfs: change the scheduling policy to FCFS.			
+sjf: change the scheduling policy to SJF.			
+priority: change the scheduling policy to priority.		
+test: <benchmark> <policy> <num_of_jobs> <priority_levels>	
+      <min_CPU_time> <max_CPU_time>				
+quit: exit AUbatch                 			   	
+help: print this menu              			   	
+
+>test testsjf sjf 5 6 8 9
+Total number of jobs submitted: 5
+Average turnaround time:	25.20 seconds
+Average CPU time:		8.60 seconds
+Average waiting time:		16.60 seconds
+Throughput			0.116 No./second
+
+>run a 15 18
+The Job awas Successfully submitted.
+Total number of jobs in the queue: 0
+Expected waiting time: 15 seconds
+Scheduling Policy: SJF.
+
+>run b 16 20
+The Job bwas Successfully submitted.
+Total number of jobs in the queue: 1
+Expected waiting time: 31 seconds
+Scheduling Policy: SJF.
+
+>run c 11 13
+The Job cwas Successfully submitted.
+Total number of jobs in the queue: 2
+Expected waiting time: 42 seconds
+Scheduling Policy: SJF.
+
+>run d 12 22
+The Job dwas Successfully submitted.
+Total number of jobs in the queue: 2
+Expected waiting time: 39 seconds
+Scheduling Policy: SJF.
+
+>fcfs
+Scheduling policy is switched to FCFS. All the 2 waiting jobs
+have been rescheduled.
+>lsit
+lsit
+: Command not found
+
+>list
+
+Total Number of jobs in the queue: 1
+Scheduling Policy: FCFS.
+Name	CPU_Time	Priority	Arrival_time	Progress
+c	11		13		02:27:03	RUN
+d	12		22		02:27:12	
+
+>sjf
+Scheduling policy is switched to SJF. All the 1 waiting jobs
+have been rescheduled.
+>ls ist
+
+Total Number of jobs in the queue: 1
+Scheduling Policy: SJF.
+Name	CPU_Time	Priority	Arrival_time	Progress
+c	11		13		02:27:03	RUN
+d	12		22		02:27:12	
+
+>priority
+Scheduling policy is switched to Priority. All the 0 waiting jobs
+have been rescheduled.
+>list
+
+Total Number of jobs in the queue: 0
+Scheduling Policy: Priority.
+Name	CPU_Time	Priority	Arrival_time	Progress
+d	12		22		02:27:12	RUN
+
+>quit
+Total number of jobs submitted: 9
+Average turnaround time:	25.44 seconds
+Average CPU time:		10.78 seconds
+Average waiting time:		14.67 seconds
+Throughput			0.093 No./second
+sh-4.2# exit
+exit
+
+Script done on Sun Mar 19 02:27:49 2023
