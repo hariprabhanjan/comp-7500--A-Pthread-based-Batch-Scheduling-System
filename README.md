@@ -1,1 +1,1 @@
-# comp-7500--A-Pthread-based-Batch-Scheduling-System
+# COMP7500-A-Pthread-based-Batch-Scheduling-System
